@@ -1,0 +1,10 @@
+Please generate some code to do the following
+1. Load the Fashion MNIST data
+2. Train a CNN model using Keras Python library
+3. Evaluate the model performance
+4. Visualize the model performance
+4. Save the model
+
+
+##########################
+
