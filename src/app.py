@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title("Hello, World!")
+    st.title("Group 4 Clothes Classifier")
 
 
     picture = st.camera_input("Take a picture")
