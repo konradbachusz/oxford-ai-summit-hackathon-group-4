@@ -8,3 +8,7 @@ Please generate some code to do the following
 
 ##########################
 
+Please create a python function to show a sample of images from the Fashion MNIST data from train_images
+
+##########################
+
