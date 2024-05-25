@@ -1,0 +1,1 @@
+This is the best data set I have heard of about fashion : https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-dataset
