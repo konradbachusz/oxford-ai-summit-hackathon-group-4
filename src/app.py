@@ -1,4 +1,5 @@
 import streamlit as st
+
 from transformers import AutoImageProcessor, AutoModelForImageClassification
 from PIL import Image
 import requests
@@ -34,19 +35,16 @@ def main():
     st.title("Group 4 Clothes Classifier")
 
     # Streamlit widget to accept user input image
-    uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
-    
-    if uploaded_file is not None:
-        # Convert the file to an image
-        image = Image.open(uploaded_file)
-        
-        # Display the image
-        st.image(image, caption='Uploaded Image', use_column_width=True)
-        
+    picture = st.camera_input("Take a picture")
+
+    if picture:
+        st.image(picture)
+
+
         # Classify the image
         if st.button('Classify'):
             # Call the classify_image function
-            class_name = classify_image(image)
+            class_name = classify_image(picture)
             st.write(f"Predicted class: {class_name}")
 
 if __name__ == "__main__":
