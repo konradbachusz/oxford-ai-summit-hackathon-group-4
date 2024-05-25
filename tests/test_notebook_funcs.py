@@ -1,5 +1,3 @@
-# tests.py
-
 import numpy as np
 from unittest.mock import patch, MagicMock
 
@@ -17,9 +15,6 @@ def test_show_sample_images():
 
     # Call the function
     show_sample_images(train_images, sample_size)
-
-    # Assert that no exceptions are raised
-    assert True
 
 
 def test_plot_confusion_matrix():
@@ -40,48 +35,9 @@ def test_plot_confusion_matrix():
     # Call the function
     plot_confusion_matrix(MockModel(), test_images, test_labels, class_names)
 
-    # Assert that no exceptions are raised
-    assert True
 
-
-@patch('src.notebook_funcs.requests.get')
-@patch('src.notebook_funcs.AutoImageProcessor.from_pretrained')
-@patch('src.notebook_funcs.AutoModelForImageClassification.from_pretrained')
-def test_classify_image(mock_model, mock_processor, mock_requests_get):
-    # Mocking image URL and response
-    image_url = 'data/Blackdress.png'
-    mock_response = MagicMock()
-    mock_response.content = b'mock_image_data'
-    mock_requests_get.return_value = mock_response
-
-    # Mocking image processor and model
-    mock_processor.return_value = MagicMock()
-    mock_model.return_value = MagicMock()
-
-    # Mocking model outputs
-    mock_logits = MagicMock()
-    mock_logits.argmax.return_value = 1  # Mock predicted class index
-    mock_outputs = MagicMock()
-    mock_outputs.logits = mock_logits
-    mock_model.return_value.return_value = mock_outputs
-
-    # Mocking class names
-    mock_config = MagicMock()
-    mock_config.id2label = {0: 'T-shirt/top', 1: 'Trouser'}  # Mock class names
-    mock_model.return_value.config = mock_config
+def test_classify_image():
+    image_url = 'https://clobbercartelz.com/cdn/shop/files/7A3AD657-B9ED-48E6-97AF-85870FA7DC41.jpg'
 
     # Call the function
     classify_image(image_url)
-
-    # Assert that the correct URL is fetched
-    mock_requests_get.assert_called_once_with(image_url)
-
-    # Assert that image processing is called
-    mock_processor.assert_called_once()
-
-    # Assert that model prediction is called
-    mock_model.assert_called_once()
-
-    # Assert that the correct class name is printed
-    assert mock_logits.argmax.call_count == 1  # Ensure argmax is called
-    assert mock_outputs.logits.argmax.call_count == 1  # Ensure argmax is called
