@@ -47,7 +47,7 @@ def main():
         if st.button('Classify'):
             # Call the classify_image function
             class_name = classify_image(image)
-            st.write(f"Predicted class: {class_name}")
+            st.title(f"Predicted class: {class_name}")
 
 if __name__ == "__main__":
     main()
