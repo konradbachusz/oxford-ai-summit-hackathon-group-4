@@ -16,5 +16,16 @@ def show_upload_image():
         st.image(image, caption='Uploaded Image', use_column_width=True)
         st.write("Image Shape:", image_array.shape)
 
+        #Button to call the model
+        recommendations_button =st.button("Get Recommendations")
+        if recommendations_button:
+
+            #TODO Pass the image to the model and return the predicted label e.g "scarf", "shirt" etc.
+            predicted_label = "red dress" #TODO: This is a mock. Please change this to an actual prediction
+            st.write(f"Item predicted as {predicted_label}. Here are similar items")
+
+
+
+
 if __name__ == "__main__":
     show_upload_image()
