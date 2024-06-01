@@ -55,3 +55,5 @@ def get_recommendations(predicted_label):
             st.text("Price: $99.99")
             st.button("Buy Now",key = count)
             count += 1
+
+
