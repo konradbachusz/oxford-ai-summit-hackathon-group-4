@@ -6,6 +6,7 @@ Deadline : 7th of June 2024
 # Links
 ## ChatGPT
 - Load Dataset Load Model Train CNN Simple: https://chatgpt.com/share/18f954ae-68d0-43c6-94ce-ff620137b720
+- Training CNN : https://chatgpt.com/share/fd803711-be10-41b7-ac77-e49d8ebbca30 
 
 ## Other
 - Colab https://colab.research.google.com/github/konradbachusz/oxford-ai-summit-hackathon-group-4/blob/main/src/notebook.ipynb
