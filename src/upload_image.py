@@ -21,8 +21,6 @@ def show_upload_image():
         #TODO Pass the image to the model and return the predicted label e.g "scarf", "shirt" etc.
         predicted_label = "Dresses" #TODO: This is a mock. Please change this to an actual prediction
 
-
-            
         get_recommendations(predicted_label)
 
 

@@ -1,6 +1,7 @@
 import glob
 import streamlit as st
 from PIL import Image
+import pandas as pd
 
 predicted_label_list = predicted_label_list = ['Shirts', 'Jeans', 'Watches', 'Track Pants', 'Tshirts', 'Socks',
        'Casual Shoes', 'Belts', 'Flip Flops', 'Handbags', 'Tops', 'Bra',
@@ -36,7 +37,9 @@ predicted_label_list = predicted_label_list = ['Shirts', 'Jeans', 'Watches', 'Tr
        'Rain Trousers', 'Body Wash and Scrub', 'Suits', 'Ipad']
 
 def get_recommendations(predicted_label):
-    
+
+    metadata = pd.read_csv("data/processed_metadata.csv")
+
     #Button to call the model
     recommendations_button =st.button("Get Recommendations")
     if recommendations_button:
@@ -45,11 +48,11 @@ def get_recommendations(predicted_label):
         st.header(f"Item predicted as {predicted_label}. Here are similar items:")
         
         #Display recommendations
-        image_paths = glob.glob(f"data/{predicted_label}/*")
+       
+        image_paths = list(metadata[metadata['articleType'] == predicted_label]['link'].head(10)) #Get top 10 products
         count=0
         for image_path in image_paths:
-            image = Image.open(image_path)
-            st.image(image, use_column_width=True)
+            st.image(image_path, use_column_width=True)
             st.text("Item: Item Name")
             st.text("Description: Item Description")
             st.text("Price: $99.99")
