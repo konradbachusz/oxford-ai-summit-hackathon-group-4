@@ -31,7 +31,6 @@ def show_camera_on():
                 img_array = np.array(img)
 
                 st.image(img, caption='Captured Image', use_column_width=True)
-                st.write("Image Shape:", img_array.shape)
             else:
                 st.error("Failed to capture image.")
 
