@@ -1,4 +1,4 @@
-# ClothesTalk AI - Business Documents
+# ClothesTalk AI - Business Documents, Links broke, will fix later
 
 Welcome to the repository for ClothesTalk AI, an innovative startup leveraging advanced artificial intelligence to revolutionize the fashion industry. This folder contains all the essential business documents that outline our project's strategy, progress, and future plans.
 
