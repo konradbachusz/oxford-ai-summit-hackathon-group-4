@@ -2,7 +2,9 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 from logo import display_logo
-import glob
+from recommendations import get_recommendations
+
+
 
 
 def show_upload_image():
@@ -15,23 +17,13 @@ def show_upload_image():
         image_array = np.array(image)
 
         st.image(image, caption='Uploaded Image', use_column_width=True)
+        
+        #TODO Pass the image to the model and return the predicted label e.g "scarf", "shirt" etc.
+        predicted_label = "red_dress" #TODO: This is a mock. Please change this to an actual prediction
 
-        #Button to call the model
-        recommendations_button =st.button("Get Recommendations")
-        if recommendations_button:
 
-            #TODO Pass the image to the model and return the predicted label e.g "scarf", "shirt" etc.
-            predicted_label = "red_dress" #TODO: This is a mock. Please change this to an actual prediction
-            st.header(f"Item predicted as {predicted_label}. Here are similar items:")
             
-            #Display recommendations
-            image_paths = glob.glob(f"data/{predicted_label}/*")
-            count=0
-            for image_path in image_paths:
-                image = Image.open(image_path)
-                st.image(image, caption='Item Description', use_column_width=True)
-                st.button("Buy Now",key = count)
-                count += 1
+        get_recommendations(predicted_label)
 
 
 
