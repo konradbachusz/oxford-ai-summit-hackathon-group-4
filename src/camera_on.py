@@ -1,38 +1,31 @@
 import streamlit as st
 import numpy as np
 from PIL import Image
-import cv2
 from logo import display_logo
+from recommendations import get_recommendations
+
 
 
 def show_camera_on():
+
     display_logo()
-    st.header("Camera On")
-    capture = st.button('Capture from Camera')
+    img_file_buffer = st.camera_input("'Capture from Camera'")
 
-    if capture:
-        # Open the camera
-        cap = cv2.VideoCapture(0)
+    if img_file_buffer is not None:
+        # To read image file buffer as a PIL Image:
+        image = Image.open(img_file_buffer)
 
-        if not cap.isOpened():
-            st.error("Could not open camera.")
-        else:
-            ret, frame = cap.read()
-            cap.release()  # Release the camera immediately after capturing
+        # To convert PIL Image to numpy array:
+        img_array = np.array(image)
 
-            if ret:
-                # Convert the frame to RGB (cv2 captures in BGR)
-                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        st.image(image, caption='Uploaded Image', use_column_width=True)
 
-                # Convert the frame to PIL image
-                img = Image.fromarray(frame)
+        
+        #TODO Pass the image to the model and return the predicted label e.g "scarf", "shirt" etc.
+        predicted_label = "Shirt" #TODO: This is a mock. Please change this to an actual prediction
 
-                # Convert the PIL image to numpy array
-                img_array = np.array(img)
+        get_recommendations(predicted_label)
 
-                st.image(img, caption='Captured Image', use_column_width=True)
-            else:
-                st.error("Failed to capture image.")
 
 
 if __name__ == "__main__":
