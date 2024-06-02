@@ -22,7 +22,7 @@ def show_camera_on():
 
         
         #TODO Pass the image to the model and return the predicted label e.g "scarf", "shirt" etc.
-        predicted_label = "Shirt" #TODO: This is a mock. Please change this to an actual prediction
+        predicted_label = "Shirts" #TODO: This is a mock. Please change this to an actual prediction
 
         get_recommendations(predicted_label)
 
