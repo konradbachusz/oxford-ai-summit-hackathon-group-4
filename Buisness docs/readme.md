@@ -37,7 +37,7 @@ Welcome to the repository for ClothesTalk AI, an innovative startup leveraging a
 ## Contributions
 
 - **Pietro**: Initial business proposal and foundational work.
-- **[Your Name]**: Review, development, and refinement of the business proposal, creation of additional chapters, and preparation of presentation materials.
+- **Magnus**: Review, development, and refinement of the business proposal, creation of additional chapters, and preparation of presentation materials.
 
 ## Contact
 
