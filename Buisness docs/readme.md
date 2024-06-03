@@ -1,6 +1,7 @@
 # ClothesTalk AI - Business Documents, see documents in folder
 
 Welcome to the repository for ClothesTalk AI, an innovative startup leveraging advanced artificial intelligence to revolutionize the fashion industry. This folder contains all the essential business documents that outline our project's strategy, progress, and future plans.
+![image](https://github.com/konradbachusz/oxford-ai-summit-hackathon-group-4/assets/130930212/655bd13b-e0eb-4477-a86e-dff95e932fa1)
 
 ## Contents
 
