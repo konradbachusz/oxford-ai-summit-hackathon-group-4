@@ -21,7 +21,7 @@ def show_camera_on():
         img_array = np.array(image)
 
         st.image(image, caption='Uploaded Image', use_column_width=True)
-        weight_path = pathlib.Path("..", "weights", "yolo.pt")
+        weight_path = pathlib.Path("..", "weights", "fashion-yolov8n-cls.pt")
         model = YoloModel(weight_path)
         predicted_label, conf = model.predict(img_array)
 
