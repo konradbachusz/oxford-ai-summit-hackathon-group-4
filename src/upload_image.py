@@ -4,6 +4,7 @@ from PIL import Image
 from logo import display_logo
 from recommendations import get_recommendations
 from yolo import YoloModel
+import pathlib
 
 
 def show_upload_image():
@@ -17,7 +18,8 @@ def show_upload_image():
 
         st.image(image, caption='Uploaded Image', use_column_width=True)
 
-        model = YoloModel("../weights/yolo.pt")
+        weight_path = pathlib.Path("..", "weights", "yolo.pt")
+        model = YoloModel(weight_path)
         predicted_label, conf = model.predict(image_array)
 
         get_recommendations(predicted_label)
