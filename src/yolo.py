@@ -152,7 +152,7 @@ class YoloModel:
         self.model = YOLO(model=weights_path, task="classify")
 
     def predict(self, image: str | np.ndarray | list) -> tuple[str, float]:
-        results = self.model.predict(image, verbose=False)
+        results = self.model.predict(image, verbose=False, imgsz=128)
         result, = results
 
         top1_val = result.probs.top1
