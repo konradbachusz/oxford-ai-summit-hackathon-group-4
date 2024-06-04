@@ -1,4 +1,5 @@
 from ultralytics import YOLO
+import numpy as np
 
 YOLO_CLASSES = {
     0: "Accessory Gift Set",
@@ -150,8 +151,8 @@ class YoloModel:
     def __init__(self, weights_path: str):
         self.model = YOLO(model=weights_path, task="classify")
 
-    def predict(self, image_path: str) -> tuple[str, float]:
-        results = self.model.predict(image_path, verbose=False)
+    def predict(self, image: str | np.ndarray | list) -> tuple[str, float]:
+        results = self.model.predict(image, verbose=False)
         result, = results
 
         top1_val = result.probs.top1
