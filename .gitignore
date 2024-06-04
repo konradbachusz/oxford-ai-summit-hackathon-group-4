@@ -164,5 +164,5 @@ src/fashion_product_images/
 src/fashion_product_images/*
 src/runs/
 src/runs/*
-src/datasets/
-src/datasets/*
+src/datasets/train*
+src/datasets/val*
