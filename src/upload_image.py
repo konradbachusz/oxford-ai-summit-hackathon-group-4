@@ -3,8 +3,7 @@ import numpy as np
 from PIL import Image
 from logo import display_logo
 from recommendations import get_recommendations
-
-
+from yolo import YoloModel
 
 
 def show_upload_image():
@@ -17,18 +16,11 @@ def show_upload_image():
         image_array = np.array(image)
 
         st.image(image, caption='Uploaded Image', use_column_width=True)
-        
-        #TODO Pass the image to the model and return the predicted label e.g "scarf", "shirt" etc.
-        predicted_label = "Dresses" #TODO: This is a mock. Please change this to an actual prediction
+
+        model = YoloModel("../weights/yolo.pt")
+        predicted_label, conf = model.predict(image_array)
 
         get_recommendations(predicted_label)
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
