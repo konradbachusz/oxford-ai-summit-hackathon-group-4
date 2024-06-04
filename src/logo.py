@@ -1,17 +1,18 @@
 import streamlit as st
 from PIL import Image
+import pathlib
 
 def display_logo():
-    logo = Image.open("src\Logo-without text.png")  # Update with the correct path to your logo image
+    logo = Image.open(pathlib.Path("src", "Logo-without text.png"))  # Update with the correct path to your logo image
     st.image(logo, use_column_width=False, width=150)
 
 
 def blog_description():
     long_text_1 = """
-            Welcome to our dedicated space for fashion enthusiasts to share 
-            their passion and creativity. Our platform is designed to empower fashion bloggers 
-            and boutique retailers, offering them a unique opportunity to express themselves, 
-            share their insights, and connect with a like-minded community. 
+            Welcome to our dedicated space for fashion enthusiasts to share
+            their passion and creativity. Our platform is designed to empower fashion bloggers
+            and boutique retailers, offering them a unique opportunity to express themselves,
+            share their insights, and connect with a like-minded community.
             Because fashion is more than just trends.
             """
     # Custom HTML and CSS for the text box
