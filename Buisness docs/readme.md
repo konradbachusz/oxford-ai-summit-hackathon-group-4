@@ -1,31 +1,32 @@
-# ClothesTalk AI - Business Documents, Links broke, will fix later
+# ClothesTalk AI - Business Documents, see documents in folder
 
 Welcome to the repository for ClothesTalk AI, an innovative startup leveraging advanced artificial intelligence to revolutionize the fashion industry. This folder contains all the essential business documents that outline our project's strategy, progress, and future plans.
+![image](https://github.com/konradbachusz/oxford-ai-summit-hackathon-group-4/assets/130930212/655bd13b-e0eb-4477-a86e-dff95e932fa1)
 
 ## Contents
 
 ### 1. Business Proposal
-- **[ClothesTalk_AI_Business_Proposal_v3.docx](ClothesTalk_AI_Business_Proposal_v3.docx)**
+- 
   - The detailed business proposal outlining the project, market opportunity, business model, and more.
 
 ### 2. Project Review
-- **[ClothesTalk_AI_Review.docx](ClothesTalk_AI_Review.docx)**
+
   - A comprehensive review and grading of the business proposal, ensuring alignment with project requirements.
 
 ### 3. VC Approval Report
-- **[ClothesTalk_AI_VC_Approval_Report.docx](ClothesTalk_AI_VC_Approval_Report.docx)**
+
   - Report from a venture capitalist simulation, analyzing the proposal's viability and potential for high returns.
 
 ### 4. Presentation Slides
-- **[ClothesTalk_AI_Presentation_Slides.docx](ClothesTalk_AI_Presentation_Slides.docx)**
+
   - Ideas and content for presentation slides covering key aspects of the project.
 
 ### 5. Project Prompts
-- **[ClothesTalk_AI_Project_Prompts.docx](ClothesTalk_AI_Project_Prompts.docx)**
+
   - Documentation of the prompts and interactions with the custom GPT, guiding the development of the business proposal.
 
 ### 6. Project Development Summary
-- **[ClothesTalk_AI_Project_Development_Summary.docx](ClothesTalk_AI_Project_Development_Summary.docx)**
+
   - Summary of the project development process, including steps taken and achievements.
 
 ## Instructions

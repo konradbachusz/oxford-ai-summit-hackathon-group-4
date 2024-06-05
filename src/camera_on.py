@@ -3,6 +3,8 @@ import numpy as np
 from PIL import Image
 from logo import display_logo
 from recommendations import get_recommendations
+from yolo import YoloModel
+import pathlib
 
 
 
@@ -19,11 +21,9 @@ def show_camera_on():
         img_array = np.array(image)
 
         st.image(image, caption='Uploaded Image', use_column_width=True)
-        
-
-        
-        #TODO Pass the image to the model and return the predicted label e.g "scarf", "shirt" etc.
-        predicted_label = "Shirts" #TODO: This is a mock. Please change this to an actual prediction
+        weight_path = pathlib.Path("..", "weights", "fashion-yolov8n-cls.pt")
+        model = YoloModel(weight_path)
+        predicted_label, conf = model.predict(img_array)
 
         get_recommendations(predicted_label)
 
@@ -31,4 +31,3 @@ def show_camera_on():
 
 if __name__ == "__main__":
     show_camera_on()
-
