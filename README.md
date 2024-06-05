@@ -1,6 +1,8 @@
 # oxford-ai-summit-hackathon-group-4
 This is the official repository of Group 4's project for the Oxford AI Summit Hackathon held 24th and 25th May 2024
 
+# Solution Design
+![alt text](image.png)
 Deadline : 7th of June 2024
 
 # Links
@@ -11,3 +13,5 @@ Deadline : 7th of June 2024
 ## Other
 - Colab https://colab.research.google.com/github/konradbachusz/oxford-ai-summit-hackathon-group-4/blob/main/src/notebook.ipynb
 - Miro board https://miro.com/welcomeonboard/RVluUVhCdWRwSUZXaHNXa0d0VkVYNGFIbGRFcFgxUWRSbjN5MDdGVFU3cEZ2THlhb2NrN09iS1dSckJrMHZwanwzMDc0NDU3MzQ3MDcyNDgxNjgxfDI=?share_link_id=700187827558
+
+
