@@ -15,3 +15,10 @@ Deadline : 7th of June 2024
 - Miro board https://miro.com/welcomeonboard/RVluUVhCdWRwSUZXaHNXa0d0VkVYNGFIbGRFcFgxUWRSbjN5MDdGVFU3cEZ2THlhb2NrN09iS1dSckJrMHZwanwzMDc0NDU3MzQ3MDcyNDgxNjgxfDI=?share_link_id=700187827558
 
 
+## How to run the web app?
+
+pip install -r .\requirements.txt
+
+cd .\src\
+
+streamlit run .\src\main.py
